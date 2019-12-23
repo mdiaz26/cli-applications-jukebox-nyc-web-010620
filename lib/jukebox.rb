@@ -39,7 +39,6 @@ def play(songs)
   input = gets.strip
   if (1..9) === input
     song_choice = songs[input - 1]
-    puts "Playing"
     puts "Playing #{song_choice}"
   elsif songs.any? {|song| input == song}
     puts "Playing #{input}"
@@ -65,7 +64,7 @@ def run(songs)
       puts "Please enter a command:"
       input = gets.strip
     elsif input == "play"
-      play
+      play(songs)
       puts "Please enter a command:"
       input = gets.strip
     elsif input == "exit"
