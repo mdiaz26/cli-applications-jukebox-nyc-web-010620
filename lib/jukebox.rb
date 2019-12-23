@@ -58,10 +58,16 @@ def run(songs)
   until input == "exit" do
     if input == "help"
       help
+      puts "Please enter a command:"
+      input = gets.strip
     elsif input == "list"
       list(songs)
+      puts "Please enter a command:"
+      input = gets.strip
     elsif input == "play"
       play
+      puts "Please enter a command:"
+      input = gets.strip
     else
       puts "Please enter a command:"
       input = gets.strip
