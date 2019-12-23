@@ -37,8 +37,8 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   input = gets.strip
-  if (1..9) === input
-    song_choice = songs[input - 1]
+  if input.to_i <= songs.length
+    song_choice = songs[input.to_i - 1]
     puts "Playing #{song_choice}"
   elsif songs.any? {|song| input == song}
     puts "Playing #{input}"
